@@ -1,23 +1,25 @@
-import { useState } from "react"
+import React, { useState } from "react";
+import { Form, Label, Input, Button, ContainerForm } from "./ToDoList.styles";
 
-export function ToDoForm({onSubmit}) {
-    const [newItem, setNewItem] = useState("")
+export function ToDoForm({ onSubmit }) {
+  const [newItem, setNewItem] = useState("");
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        if (newItem === "") return 
-        onSubmit(newItem)
-        setNewItem("")
-    
-      }
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (newItem === "") return;
+    onSubmit(newItem);
+    setNewItem("");
+  }
 
-    return (
-    <form onSubmit={handleSubmit} className="new-item-form" >
-    <div className="form-row">
-    <label htmlFor="item">Enter a Task:</label>
-    <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item"></input>
-    </div>
-    <button className="btn">Add</button>
-  </form>
-    )
+  return (
+    <ContainerForm>
+    <Form onSubmit={handleSubmit}>
+        <Label htmlFor="item">Enter a Task:</Label>
+        <Input value={newItem} onChange={(e) => setNewItem(e.target.value)} type="text" id="item" />
+      <Button>+</Button>
+    </Form>
+    </ContainerForm>
+
+
+  );
 }

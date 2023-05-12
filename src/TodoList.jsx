@@ -1,8 +1,11 @@
 import { TodoItem } from "./TodoItem"
+import {StyledUnorderedList, Wrapper} from "./ToDoList.styles"
 
 export function TodoList({todos, toggleTodo, deleteTodo}) {
     return (
-        <ul className="list">
+      <Wrapper>
+
+        <StyledUnorderedList className="list">
         {todos.length === 0 && "No Tasks!"}
         {todos.map(todo => {
           return (
@@ -14,6 +17,8 @@ export function TodoList({todos, toggleTodo, deleteTodo}) {
             />
           )
         })}
-      </ul>
+      </StyledUnorderedList>
+      </Wrapper>
+
     )
 }
