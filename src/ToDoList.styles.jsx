@@ -19,7 +19,6 @@ export const Heading = styled.h1`
   display: flex;
   justify-content: center;
   color: white;
-  text-decoration: underline;
 `;
 
 export const ListItems = styled.li`
