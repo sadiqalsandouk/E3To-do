@@ -119,7 +119,7 @@ export const Button = styled.button`
   color: white;
   font-weight: 400;
   font-size: 3rem;
-  box-shadow: 0 4px 14px 0 rgb(244 196 48 / 39%);
+  box-shadow: 0 4px 14px 0 rgb(244 196 48 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   :hover{
       background: rgba(219,176,43,0.9);
@@ -138,7 +138,7 @@ export const DeleteButton = styled.button`
   background-color: #CC0000;
   color: white;
   font-size: 1rem;
-  box-shadow: 0 4px 14px 0 rgb(204 0 0 / 25%);
+  box-shadow: 0 4px 14px 0 rgb(204 0 0 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   margin-left: 1rem;
   flex-shrink: 0;
