@@ -12,30 +12,51 @@ export const GlobalStyle = createGlobalStyle`
 export const Wrapper = styled.div`
   max-width: 900px;
   margin: 0 auto;
-`;
+  padding: 0 1rem;
 
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 300px;
+  }
+`;
 
 export const Heading = styled.h1`
   display: flex;
   justify-content: center;
   color: white;
+  font-size: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ListItems = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   padding: 0.5rem;
   background-color: #222;
+  font-size: 1.25rem;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledUnorderedList = styled.ul`
   color: white;
   background-color: #222;
   font-size: 1.25rem;
-  
-  `;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
 
 export const StyledCheckbox = styled.input`
   position: relative;
@@ -68,42 +89,77 @@ export const StyledCheckbox = styled.input`
   &:hover {
     border-color: #F4C430;
   }
+
+  @media (max-width: 480px) {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
 `;
 
 export const Label = styled.label`
   font-size: 1.5rem;
   color: white;
-  flex: 1;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    text-align: right;
+  }
 `;
 
 export const TaskTitle = styled.label`
   display: flex;
+  align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.25rem;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const ContainerForm = styled.div`
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 `;
 
 export const Form = styled.form`
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Input = styled.input`
   flex: 1;
   font-size: 1.75rem;
   padding: 1rem 0.5rem;
-  margin: 1rem 1rem;
+  margin: 1rem;
   border: 1px solid white;
   border-radius: 0.25rem;
   background: rgb(79,79,79);
   color: white;
   height: 3rem;
   box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    margin: 1rem 1rem 1rem 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -120,9 +176,11 @@ export const Button = styled.button`
   font-size: 3rem;
   box-shadow: 0 4px 14px 0 rgb(244 196 48 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
-  :hover{
-      background: rgba(219,176,43,0.9);
-      box-shadow: 0 6px 20px rgb(195 156 38 / 23%);
+  margin-top: 1rem;
+  
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    width: auto;
   }
 `;
 
@@ -133,10 +191,12 @@ export const DeleteButton = styled.button`
   border: none;
   height: 2rem;
   width: 2rem;
-  border-radius: 100px;
+  border-radius: 50%;
   background-color: #CC0000;
   color: white;
   font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
   box-shadow: 0 4px 14px 0 rgb(204 0 0 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   margin-left: 1rem;
@@ -146,5 +206,3 @@ export const DeleteButton = styled.button`
       box-shadow: 0 6px 20px rgb(178 0 0 / 23%);
   }
 `;
-
-

@@ -14,11 +14,13 @@ export function ToDoForm({ onSubmit }) {
   return (
     <ContainerForm>
     <Form onSubmit={handleSubmit}>
-        <Label htmlFor="item">Enter a Task:</Label>
+      <Label htmlFor="item">Enter a Task:</Label>
+      <ContainerForm>
         <Input value={newItem} onChange={(e) => setNewItem(e.target.value)} type="text" id="item" />
-      <Button>+</Button>
-    </Form>
-    </ContainerForm>
+        <Button style={{ display: 'inline-block' }}>+</Button>
+        </ContainerForm>  
+        </Form>
+        </ContainerForm>
 
 
   );
