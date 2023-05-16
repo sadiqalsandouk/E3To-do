@@ -15,11 +15,11 @@ export const Wrapper = styled.div`
   padding: 0 1rem;
 
   @media (max-width: 768px) {
-    max-width: 90%;
+    max-width: 60%;
   }
   
   @media (max-width: 480px) {
-    max-width: 80%;
+    max-width: 50%;
   }
   
 `;
