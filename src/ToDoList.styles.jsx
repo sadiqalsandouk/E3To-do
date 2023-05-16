@@ -15,12 +15,13 @@ export const Wrapper = styled.div`
   padding: 0 1rem;
 
   @media (max-width: 768px) {
-    max-width: 600px;
+    max-width: 90%;
   }
-
+  
   @media (max-width: 480px) {
-    max-width: 300px;
+    max-width: 80%;
   }
+  
 `;
 
 export const Heading = styled.h1`
@@ -166,14 +167,14 @@ export const Button = styled.button`
   outline: 0;
   cursor: pointer;
   border: none;
-  padding: 0 1rem;
+  padding: 0 0.75rem;
   height: 3rem;
   line-height: 45px;
   border-radius: 7px;
   background-color: #F4C430;
   color: white;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 1rem;
   box-shadow: 0 4px 14px 0 rgb(244 196 48 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   margin-top: 1rem;
@@ -181,6 +182,8 @@ export const Button = styled.button`
   @media screen and (min-width: 768px) {
     margin-top: 0;
     width: auto;
+    font-size: 2rem;
+
   }
 `;
 
@@ -204,5 +207,9 @@ export const DeleteButton = styled.button`
   :hover{
       background: rgba(178,0,0,0.9);
       box-shadow: 0 6px 20px rgb(178 0 0 / 23%);
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.75rem;
   }
 `;
