@@ -15,11 +15,11 @@ export const Wrapper = styled.div`
   padding: 0 1rem;
 
   @media (max-width: 768px) {
-    max-width: 60%;
+    max-width: 90%;
   }
   
   @media (max-width: 480px) {
-    max-width: 50%;
+    max-width: 80%;
   }
   
 `;
@@ -40,11 +40,12 @@ export const ListItems = styled.li`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  margin-left: -3rem;
   padding: 0.5rem;
   background-color: #222;
   font-size: 1.25rem;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
   }
 `;
@@ -91,10 +92,11 @@ export const StyledCheckbox = styled.input`
     border-color: #F4C430;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 1.75rem;
     height: 1.75rem;
     font-size: 1rem;
+    padding: 0;
   }
 `;
 
@@ -119,7 +121,7 @@ export const TaskTitle = styled.label`
   color: white;
   font-size: 1.25rem;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
   }
 `;
@@ -148,7 +150,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   flex: 1;
-  font-size: 1.75rem;
+  font-size: 1rem;
   padding: 1rem 0.5rem;
   margin: 1rem;
   border: 1px solid white;
@@ -160,6 +162,7 @@ export const Input = styled.input`
 
   @media screen and (min-width: 768px) {
     margin: 1rem 1rem 1rem 0;
+    font-size: 1.75rem;
   }
 `;
 
@@ -178,6 +181,9 @@ export const Button = styled.button`
   box-shadow: 0 4px 14px 0 rgb(244 196 48 / 15%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   margin-top: 1rem;
+  :hover{
+    background: rgba(219,176,43);
+}
   
   @media screen and (min-width: 768px) {
     margin-top: 0;
@@ -189,7 +195,7 @@ export const Button = styled.button`
 
 export const DeleteButton = styled.button`
   outline: 0;
-  margin-right: 1rem;
+  margin-right: -1rem;
   cursor: pointer;
   border: none;
   height: 2rem;
